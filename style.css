@@ -1,0 +1,92 @@
+/* Styles de base */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #84aad1;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+/* Style pour le titre "Statistiques des Données" */
+h1 {
+    font-family: 'Arial', sans-serif; /* Choisis une police moderne et élégante */
+    font-size: 3rem; /* Grande taille de police */
+    font-weight: bold; /* Mettre le texte en gras */
+    text-align: center; /* Centrer le texte */
+    color: white; /* Couleur de base */
+    background-image: linear-gradient(to right, #3498db, #9b59b6); /* Dégradé de couleur */
+    -webkit-background-clip: text; /* Applique le dégradé au texte */
+    background-clip: text;
+
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Ajouter une ombre douce autour du texte */
+    padding: 20px 0; /* Ajouter de l'espace autour du texte */
+    margin: 30px 0; /* Ajouter de l'espace en haut et en bas */
+    letter-spacing: 2px; /* Espacement des lettres pour plus d'impact */
+}
+
+/* Effet au survol pour un effet interactif */
+h1:hover {
+    color: #333 ; /* Changer la couleur du texte au survol */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Augmenter l'ombre pour un effet dynamique */
+    transition: all 0.3s ease; /* Transition fluide pour l'effet de survol */
+}
+
+
+/* Carte */
+.card {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text {
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.card i {
+    color: #007bff;
+}
+
+/* Mise en forme des colonnes */
+.container .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Réduire l'espacement sur petits écrans */
+@media (max-width: 768px) {
+    .container .row {
+        flex-direction: column;
+    }
+
+    .col-md-4, .col-md-6 {
+        margin-bottom: 20px;
+    }
+}
+/* Effet de survol (hover) sur les cartes */
+.card:hover {
+    transform: translateY(-10px); /* Décale légèrement la carte vers le haut */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Augmente l'ombre pour un effet de profondeur */
+    cursor: pointer; /* Change le curseur en main pour indiquer que l'élément est cliquable */
+    transition: all 0.3s ease-in-out; /* Ajoute une transition douce */
+    background-color: #333;
+}
+
+/* Ajout d'un effet de focus (quand l'élément reçoit le focus) */
+.card:focus {
+    outline: none; /* Supprime le contour par défaut */
+    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.6); /* Ajoute un contour bleu clair */
+    transform: translateY(-5px); /* Légèrement déplacé pour donner un effet de focus */
+    transition: all 0.2s ease; /* Transition plus rapide */
+}

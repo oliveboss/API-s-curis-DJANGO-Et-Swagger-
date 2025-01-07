@@ -1,0 +1,72 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistiques des Données</title>
+    <!-- CDN Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CDN Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Lien vers ton fichier CSS -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Statistiques des Données</h1>
+        
+        <!-- Statistiques des éléments -->
+        <div class="row">
+            <!-- Statistiques Clients -->
+            <div class="col-md-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <i class="fas fa-users fa-3x mb-3"></i>
+                        <h5 class="card-title">Clients</h5>
+                        <p class="card-text">Nombre total de clients : {{ clients_count }}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Statistiques Mécaniciens -->
+            <div class="col-md-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <i class="fas fa-wrench fa-3x mb-3"></i>
+                        <h5 class="card-title">Mécaniciens</h5>
+                        <p class="card-text">Nombre total de mécaniciens : {{ mecaniciens_count }}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Statistiques Rendez-vous -->
+            <div class="col-md-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <i class="fas fa-calendar-check fa-3x mb-3"></i>
+                        <h5 class="card-title">Rendez-vous</h5>
+                        <p class="card-text">Nombre total de rendez-vous : {{ rendezvous_count }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Statistiques Véhicules -->
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <i class="fas fa-car fa-3x mb-3"></i>
+                        <h5 class="card-title">Véhicules</h5>
+                        <p class="card-text">Nombre total de véhicules : {{ vehicules_count }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CDN Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
